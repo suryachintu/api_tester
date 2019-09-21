@@ -36,23 +36,23 @@
 
         <div style="width:50%;margin:auto">
 
-            <form name="add_test_form" action="/stats/add_test_case" onsubmit="return validateForm()" method="post">
+            <form name="add_test_form" action="/stats/add_test_case" method="post">
                 {% csrf_token %}
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width:100%">
-                    <input class="mdl-textfield__input" type="text" id="api_url">
+                    <input class="mdl-textfield__input" type="text" id="api_url" name="api_url">
                     <label class="mdl-textfield__label" for="api_url">Endpoint Url</label>
                 </div>
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width:100%">
-                    <input class="mdl-textfield__input" type="text" id="headers">
+                    <input class="mdl-textfield__input" type="text" id="headers" name="headers">
                     <label class="mdl-textfield__label" for="headers">Headers Json</label>
                 </div>
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width:100%">
-                    <input class="mdl-textfield__input" type="text" id="query_params">
+                    <input class="mdl-textfield__input" type="text" id="query_params" name="query_params">
                     <label class="mdl-textfield__label" for="query_params">Query Params Json</label>
                 </div>
 
                 <div id="id_div" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width:100%">
-                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="response_code">
+                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="response_code" name="response_code">
                     <label class="mdl-textfield__label" for="response_code">Expected Response Code</label>
                     <span class="mdl-textfield__error">Input is not a number!</span>
                 </div>

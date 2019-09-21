@@ -7,4 +7,4 @@ class TestCase(models.Model):
     headers = models.CharField(max_length=4000)
     params = models.CharField(max_length=4000)
     expected_response_code = models.IntegerField()
-    response_code = models.IntegerField()
+    response_code = models.IntegerField(default=0)
